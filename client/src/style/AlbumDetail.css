@@ -81,6 +81,10 @@
   color: var(--description-color);
 }
 
+#spotify-preview-url {
+  color: var(--title-color);
+}
+
 /* tracklist */
 #plWrap {
   margin: 0 auto;
