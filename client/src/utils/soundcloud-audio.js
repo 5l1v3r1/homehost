@@ -76,13 +76,11 @@ SoundCloud.prototype.play = function (options) {
         this._playlistIndex = 0;
         return;
       }
-      let streamUrl = this._playlist.tracks.items[this._playlistIndex].url_path || 
-                      this._playlist.tracks.items[this._playlistIndex].preview_url
+      let streamUrl = this._playlist.tracks.items[this._playlistIndex].preview_url
       src = streamUrl;
     }
   } else if (this._track) {
-    let streamUrl = this._track.url_path ||
-                    this._track.preview_url
+    let streamUrl = this._track.preview_url
     src = streamUrl;
   }
 
