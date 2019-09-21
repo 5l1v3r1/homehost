@@ -169,7 +169,7 @@ const generateTVMetaData = async () => {
       let episode_number = parseInt(file.match(re2)[2])
       
       let episode = await tvClient.send(new lib.requests.TVEpisode(tv_id, season_number, episode_number), 250, null)
-      episode.fs_path = file;
+      //episode.fs_path = file;
       episode.url_path = ('http://localhost:' + port + '/tv/').concat(tv_id, '/', episode.season_number, '/', episode.episode_number);
 
       let seasonIndex = _.findIndex(show.seasons, { season_number: season_number });
@@ -199,7 +199,7 @@ var generateMovieMetaData = function() {
     // find movie on TMDb
     return moviesClient.send(new lib.requests.Movie(file.match(re)[1]), 250, null)
       .then((movie) => {
-      movie.fs_path = file;
+      //movie.fs_path = file;
       movie.url_path = 'http://localhost:' + port + '/movies/' + movie.id;
       json.movies.push(movie);
       });
@@ -256,7 +256,7 @@ var generateMusicMetaData = function() {
             item.disc_number = 1
             item.track_number = index + 1
             item.duration_ms = 'NaN'
-            item.fs_path = dir + '/' + file
+            //item.fs_path = dir + '/' + file
             item.url_path = ('http://localhost:' + port + '/music/').concat(album.id, '/', item.disc_number, '/', item.track_number)
             item.external_urls = {spotify: null}
             album.tracks.items.push(item)
@@ -284,7 +284,7 @@ var generateMusicMetaData = function() {
                 // if track found
                 if ( (item.disc_number == parseInt(file.match(re2)[1] || 1) ) && 
                   (item.track_number == parseInt(file.match(re2)[3]) ) ) {
-                  item.fs_path = dir + '/' + file; 
+                  //item.fs_path = dir + '/' + file; 
                   item.url_path = ('http://localhost:' + port + '/music/').concat(album.id, '/', item.disc_number, '/', item.track_number);
                 }
               });
