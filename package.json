@@ -12,7 +12,7 @@
     "start": "NODE_ENV=prod node server"
   },
   "dependencies": {
-    "bluebird": "^3.5.5",
+    "bluebird": "^3.7.2",
     "express": "^4.17.1",
     "figlet": "^1.2.4",
     "js-yaml": "^3.13.1",
@@ -20,12 +20,12 @@
     "ncu": "^0.2.1",
     "node-dir": "^0.1.17",
     "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "underscore": "^1.9.1"
+    "request-promise": "^4.2.5",
+    "underscore": "^1.9.2"
   },
   "devDependencies": {
-    "concurrently": "^4.1.2",
-    "npm-check-updates": "^3.1.23",
-    "yarn": "^1.17.3"
+    "concurrently": "^5.0.2",
+    "npm-check-updates": "^4.0.1",
+    "yarn": "^1.21.1"
   }
 }
